@@ -1,0 +1,134 @@
+@import './base.scss';
+@import './mixin.scss';
+@import './variable.scss';
+//设置body的默认字体和字体大小
+body {
+    color: #323232;
+    font-size: 32px;
+    font-family: 'PingFang SC', Helvetica, 'STHeiti STXihei', 'Microsoft YaHei', Tohoma, Arial, sans-serif;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    // ios 微信字体放大处理
+    -webkit-text-size-adjust: 100% !important;
+}
+
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+
+@media screen and (max-width: 767px) {
+    html {
+        font-size: calc(100vw / 750 * 100);
+    }
+}
+
+
+/*当尺寸大于960px时候 */
+
+@media screen and (min-width: 768px) {
+    html {
+        font-size: 400px;
+    }
+}
+
+input,
+textarea {
+    border: 0;
+    -webkit-appearance: none; //可同时屏蔽输入框怪异的内阴影,解决iOS下无法修改按钮样式,测试还发现,加了此属性后,iOS下默认还是有圆角的,不过可以用border-radius属性修改
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.section>.title {
+    font-size: 28px;
+    padding: 40px 30px 0;
+}
+
+.loading-box {
+    height: calc(100% - 54px);
+    justify-content: center;
+}
+
+.loading {
+    width: 50%;
+    vertical-align: middle;
+}
+
+.red {
+    color: $base-color;
+}
+
+// 商品列表的价格
+.price {
+    .line-price {
+        margin-left: 10px;
+        text-decoration: line-through;
+        font-size: 20px;
+        color: #999999;
+        line-height: 24px;
+    }
+    .sale-price {
+        i {
+            font-size: 24px;
+            font-style: normal;
+        }
+        font-size: 28px;
+        color: $base-color;
+        line-height: 36px;
+    }
+}
+
+// dialog 圆角设置
+.van-dialog {
+    border-radius: 4px;
+}
+
+// 首页banner
+.index-swiper {
+    width: 100vw;
+    height: 320px;
+    .banner {
+        width: 100%;
+        height: 100%;
+    }
+    .van-swipe__indicator {
+        background-color: rgba(0, 0, 0, 0.6);
+        &.van-swipe__indicator--active {
+            background-color: #fff;
+        }
+    }
+    .van-swipe__indicator--active {
+        width: 15px;
+        border-radius: 5px;
+    }
+}
+
+// 购物车修改
+.van-goods-action {
+    justify-content: space-around;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.08);
+    .van-goods-action-icon {
+        width: 20%;
+    }
+    .van-goods-action-button--first {
+        margin-left: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .van-goods-action-button--last {
+        margin-right: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .van-goods-action-button {
+        height: 50px;
+    }
+}

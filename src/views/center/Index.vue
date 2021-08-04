@@ -4,7 +4,7 @@
  * @Author: Linyer
  * @Date: 2021-04-14 13:32:37
  * @LastEditors: Linyer
- * @LastEditTime: 2021-08-04 11:24:44
+ * @LastEditTime: 2021-08-04 11:28:35
 -->
 <template>
   <div>
@@ -17,7 +17,7 @@ import { Button } from 'vant';
 
 export default {
   components: {
-    Button,
+    [Button.name]: Button,
   },
   data() {
     return {};

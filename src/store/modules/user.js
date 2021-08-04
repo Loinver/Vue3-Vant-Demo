@@ -10,7 +10,6 @@ import { getToken } from 'utils/auth';
 const state = {
   token: getToken(),
   userInfo: {},
-  scrollTop: 0,
 };
 
 const mutations = {

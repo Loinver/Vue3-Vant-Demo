@@ -24,4 +24,4 @@ if (process.env.NODE_ENV === 'production') {
   }
 }
 
-createApp(App).use(store).use(Toast).use(Dialog).use(router).mount('#app');
+createApp(App).use(Toast).use(Dialog).use(router).use(store).mount('#app');

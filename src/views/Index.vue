@@ -4,21 +4,23 @@
  * @Author: Linyer
  * @Date: 2021-02-23 10:27:42
  * @LastEditors: Linyer
- * @LastEditTime: 2021-07-29 14:33:03
+ * @LastEditTime: 2021-08-04 10:38:51
 -->
 <template>
   <div>
     1111
     <router-link :to="{ name: 'CenterIndex' }">跳转去B页面</router-link>
+    <Button type="primary" block>跳转去B页面</Button>
   </div>
 </template>
 <script>
-import { createApp } from 'vue';
-const app = createApp();
+import { defineComponent } from 'vue';
 import { Button } from 'vant';
 
-app.use(Button);
-export default {
+export default defineComponent({
+  components: {
+    Button,
+  },
   data() {
     return {};
   },
@@ -27,5 +29,5 @@ export default {
     this.$toast(111);
   },
   methods: {},
-};
+});
 </script>

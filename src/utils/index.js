@@ -39,9 +39,11 @@ export function localStore(key, data, expires) {
    * localStore('bbb', { b: 2 }, 3); //  存储3秒
    *
    * setTimeout(function() {
+   *     console.log(localStore('aaa'), localStore('bbb')); //  {a: 1} {b: 2}
    * }, 1000);
    *
    * setTimeout(function() {
+   *     console.log(localStore('aaa'), localStore('bbb')); //  {a: 1} undefined
    * }, 4000);
    */
   const localStorage = window.localStorage;

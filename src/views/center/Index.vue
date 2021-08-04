@@ -4,18 +4,21 @@
  * @Author: Linyer
  * @Date: 2021-04-14 13:32:37
  * @LastEditors: Linyer
- * @LastEditTime: 2021-07-29 14:33:27
+ * @LastEditTime: 2021-08-04 11:24:44
 -->
 <template>
-  <div>2222</div>
+  <div>
+    2222
+    <Button>sasda</Button>
+  </div>
 </template>
 <script>
-import { createApp } from 'vue';
-const app = createApp();
 import { Button } from 'vant';
 
-app.use(Button);
 export default {
+  components: {
+    Button,
+  },
   data() {
     return {};
   },

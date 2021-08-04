@@ -1,7 +1,14 @@
+/*
+ * @Description:
+ * @Version:
+ * @Author: Linyer
+ * @Date: 2021-01-13 10:18:30
+ * @LastEditors: Linyer
+ * @LastEditTime: 2021-08-04 10:40:35
+ */
 const path = require('path');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-
 const isProduction = process.env.NODE_ENV === 'production';
 
 function resolve(dir) {
@@ -66,12 +73,9 @@ module.exports = {
     https: false,
     proxy: {
       '/api': {
-        target: 'http://121.40.254.159:15801',
+        target: 'http://11',
         changeOrigin: true,
         secure: false,
-        headers: {
-          Referer: 'http://121.40.254.159:15801',
-        },
         pathRewrite: {
           '^/api': '',
         },

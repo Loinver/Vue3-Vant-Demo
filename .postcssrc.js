@@ -1,10 +1,10 @@
 /*
- * @Description:
+ * @Description: postcss pxtovw转换规则
  * @Version:
  * @Author: Linyer
  * @Date: 2021-07-24 21:16:43
  * @LastEditors: Linyer
- * @LastEditTime: 2021-07-24 21:57:44
+ * @LastEditTime: 2021-08-05 09:11:05
  */
 const path = require('path');
 module.exports = ({ file }) => {

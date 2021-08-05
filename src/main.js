@@ -4,16 +4,15 @@
  * @Author: Linyer
  * @Date: 2021-03-31 10:22:38
  * @LastEditors: Linyer
- * @LastEditTime: 2021-07-29 18:55:56
+ * @LastEditTime: 2021-08-05 09:19:52
  */
 import { createApp } from 'vue';
-import VConsole from 'vconsole';
 import 'normalize.css';
-import { Toast, Dialog } from 'vant';
 import 'assets/styles/index.scss';
 import App from './App.vue';
 import router from './router';
 import store from './store/index';
+import VConsole from 'vconsole';
 
 if (process.env.NODE_ENV === 'production') {
   try {
@@ -24,4 +23,9 @@ if (process.env.NODE_ENV === 'production') {
   }
 }
 
-createApp(App).use(Toast).use(Dialog).use(router).use(store).mount('#app');
+import { Toast, Dialog, Button } from 'vant';
+const app = createApp(App);
+// 挂载组件
+app.use(Toast).use(Dialog).use(Button);
+// 挂载路由及状态存储
+app.use(router).use(store).mount('#app');

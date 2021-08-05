@@ -4,21 +4,15 @@
  * @Author: Linyer
  * @Date: 2021-04-14 13:32:37
  * @LastEditors: Linyer
- * @LastEditTime: 2021-08-04 11:28:35
+ * @LastEditTime: 2021-08-05 09:14:10
 -->
 <template>
   <div>
-    2222
-    <Button>sasda</Button>
+    <van-button :to="{ name: 'Index' }">我是b页面</van-button>
   </div>
 </template>
 <script>
-import { Button } from 'vant';
-
 export default {
-  components: {
-    [Button.name]: Button,
-  },
   data() {
     return {};
   },

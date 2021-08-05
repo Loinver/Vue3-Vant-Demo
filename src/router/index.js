@@ -4,7 +4,7 @@
  * @Author: Linyer
  * @Date: 2021-03-31 10:27:05
  * @LastEditors: Linyer
- * @LastEditTime: 2021-07-29 14:25:54
+ * @LastEditTime: 2021-08-05 09:47:09
  */
 import { createRouter, createWebHistory } from 'vue-router';
 
@@ -16,10 +16,20 @@ const routes = [
   {
     path: '/index.html',
     name: 'Index',
-    component: () => import(/* webpackChunkName: "index" */ '@/views/Index.vue'),
+    component: () => import(/* webpackChunkName: "index" */ '@/views/Index/index.vue'),
     meta: {
       auth: false,
       title: '首页',
+      keepAlive: true,
+    },
+  },
+  {
+    path: '/c.html',
+    name: 'C',
+    component: () => import(/* webpackChunkName: "c" */ '@/views/C/index.vue'),
+    meta: {
+      auth: false,
+      title: 'c',
       keepAlive: true,
     },
   },

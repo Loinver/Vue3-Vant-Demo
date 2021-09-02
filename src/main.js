@@ -4,7 +4,7 @@
  * @Author: Linyer
  * @Date: 2021-03-31 10:22:38
  * @LastEditors: Linyer
- * @LastEditTime: 2021-08-05 09:19:52
+ * @LastEditTime: 2021-09-02 10:00:46
  */
 import { createApp } from 'vue';
 import 'normalize.css';
@@ -23,9 +23,9 @@ if (process.env.NODE_ENV === 'production') {
   }
 }
 
-import { Toast, Dialog, Button } from 'vant';
+import { Toast, Dialog, Button, List, Cell, Search } from 'vant';
 const app = createApp(App);
 // 挂载组件
-app.use(Toast).use(Dialog).use(Button);
+app.use(Toast).use(Dialog).use(Button).use(List).use(Cell).use(Search);
 // 挂载路由及状态存储
 app.use(router).use(store).mount('#app');

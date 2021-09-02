@@ -4,12 +4,27 @@
  * @Author: Linyer
  * @Date: 2021-08-05 09:50:47
  * @LastEditors: Linyer
- * @LastEditTime: 2021-08-05 09:51:44
+ * @LastEditTime: 2021-09-02 10:09:00
 -->
 <template lang="">
-  <div>1111</div>
+  <div class="">{{ userInfo.name }}</div>
 </template>
 <script>
-export default {};
+import { defineComponent } from 'vue';
+export default defineComponent({
+  props: {
+    userInfo: {
+      type: Object,
+      default: () => {
+        return {};
+      },
+    },
+  },
+  setup(props) {
+    console.log(props.userInfo);
+
+    return {};
+  },
+});
 </script>
-<style lang="scss"></style>
+<style lang="scss" scoped></style>

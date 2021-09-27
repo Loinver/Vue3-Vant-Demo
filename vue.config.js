@@ -4,7 +4,7 @@
  * @Author: Linyer
  * @Date: 2021-01-13 10:18:30
  * @LastEditors: Linyer
- * @LastEditTime: 2021-08-04 10:40:35
+ * @LastEditTime: 2021-09-26 17:30:32
  */
 const path = require('path');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
@@ -73,7 +73,7 @@ module.exports = {
     https: false,
     proxy: {
       '/api': {
-        target: 'http://11',
+        target: 'http://127.0.0.1:3000',
         changeOrigin: true,
         secure: false,
         pathRewrite: {

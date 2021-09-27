@@ -163,3 +163,8 @@ $box-list: (pd, padding), (pdt, padding-top), (pdb, padding-bottom), (pdl, paddi
 .z-show {
   display: block;
 }
+.dp-f {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

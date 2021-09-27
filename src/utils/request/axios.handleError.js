@@ -1,6 +1,13 @@
+/*
+ * @Description:
+ * @Version:
+ * @Author: Linyer
+ * @Date: 2021-09-02 08:58:06
+ * @LastEditors: Linyer
+ * @LastEditTime: 2021-09-27 09:37:18
+ */
 export default (err) => {
   const { response } = err;
-
   if (!response.status) {
     err.code = '';
     err.message = '有response但没有response.status的情况';

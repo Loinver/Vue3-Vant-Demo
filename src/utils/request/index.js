@@ -4,7 +4,7 @@
  * @Author: Linyer
  * @Date: 2021-07-21 17:27:29
  * @LastEditors: Linyer
- * @LastEditTime: 2021-07-28 10:29:51
+ * @LastEditTime: 2021-09-27 09:27:20
  */
 import axios from 'axios';
 import setConfig from './axios.setConfig.js';
@@ -68,8 +68,7 @@ const responseInterceptorId = request.interceptors.response.use(
     const { config } = response;
     pendingPool.delete(config.url);
 
-    // console.log('响应response suc:', response)
-    showTip(response.message);
+    // console.log('响应response suc:', response);
     return Promise.resolve(handleResponse(response));
   },
   // 对异常响应处理

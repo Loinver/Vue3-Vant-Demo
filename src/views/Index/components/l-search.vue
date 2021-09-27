@@ -4,7 +4,7 @@
  * @Author: Linyer
  * @Date: 2021-08-05 09:50:47
  * @LastEditors: Linyer
- * @LastEditTime: 2021-09-02 13:42:07
+ * @LastEditTime: 2021-09-26 11:31:46
 -->
 <template lang="">
   <div>
@@ -15,36 +15,22 @@
       @search="onSearch"
       @cancel="onCancel"
     />
-    <van-button @click="handleAdd">年龄加1</van-button>
-    <div>oldAge{{ userInfo.age }}</div>
-    <div>newAge{{ searchKey.newAge }}</div>
   </div>
 </template>
 
 <script>
-import { reactive, defineComponent, toRefs } from 'vue';
+import { reactive, defineComponent, inject } from 'vue';
 export default defineComponent({
-  props: {
-    userInfo: {
-      type: Object,
-      default: () => {
-        return {};
-      },
-    },
-  },
   setup(props) {
-    const { name, age } = toRefs(props);
-    console.log(name);
+    const userInfo = inject('userInfo');
+    console.log('[ props ]', props, userInfo);
     const searchKey = reactive({
       keywords: '',
-      newAge: '',
+      name: userInfo.name,
     });
-    const handleAdd = () => {
-      age += 1;
-    };
     return {
       searchKey,
-      handleAdd,
+      userInfo,
     };
   },
   methods: {

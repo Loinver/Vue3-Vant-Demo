@@ -4,7 +4,7 @@
  * @Author: Linyer
  * @Date: 2021-02-23 10:27:42
  * @LastEditors: Linyer
- * @LastEditTime: 2021-09-02 09:16:44
+ * @LastEditTime: 2021-11-22 14:19:22
 -->
 <template>
   <div>
@@ -17,6 +17,7 @@
 import { reactive, defineComponent } from 'vue';
 
 export default defineComponent({
+  name: 'DIndex', // 最好必须添加name
   setup() {
     const list = reactive({
       data: [],

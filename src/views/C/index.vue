@@ -4,7 +4,7 @@
  * @Author: Linyer
  * @Date: 2021-02-23 10:27:42
  * @LastEditors: Linyer
- * @LastEditTime: 2021-08-05 09:41:16
+ * @LastEditTime: 2021-11-22 14:19:43
 -->
 <template>
   <div>
@@ -18,6 +18,7 @@
 import { ref, defineComponent } from 'vue';
 
 export default defineComponent({
+  name: 'CIndex', // 最好必须添加name
   setup() {
     let count = ref(1);
     const handleAdd = () => {

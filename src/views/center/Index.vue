@@ -4,7 +4,7 @@
  * @Author: Linyer
  * @Date: 2021-04-14 13:32:37
  * @LastEditors: Linyer
- * @LastEditTime: 2021-09-27 14:28:48
+ * @LastEditTime: 2021-11-22 14:19:34
 -->
 <template>
   <van-nav-bar safe-area-inset-top title="日期选择控件" left-arrow />
@@ -30,6 +30,7 @@
 <script>
 import { defineComponent, ref } from 'vue';
 export default defineComponent({
+  name: 'CenterIndex', // 最好必须添加name
   setup() {
     const currentDate = ref(new Date());
     return {

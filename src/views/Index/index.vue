@@ -39,6 +39,7 @@ import LSearch from './components/l-search.vue';
 import api from '@/apis/index.js';
 
 export default defineComponent({
+  name: 'IndexIndex', // 最好必须添加name
   components: { LHeader, LSearch },
   setup() {
     let userInfo = reactive({
@@ -138,6 +139,7 @@ export default defineComponent({
     };
     // 必须将返回的数据进行响应式
     const students = reactive(getList());
+
     // 修改userInfo
     const handleUserInfo = () => {
       userInfo.sex = '女';
